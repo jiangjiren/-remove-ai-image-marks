@@ -19,7 +19,7 @@ A Claude Code skill that automatically scans and removes all AI-generated image 
 
 | Identifier | Format | Platforms |
 |-----------|--------|-----------|
-| C2PA Content Credentials (`caBX`) | PNG / JPEG | Google Gemini, DALL-E 3, GPT Image 1, Adobe Firefly |
+| C2PA Content Credentials (`caBX`) | PNG / JPEG | Google Gemini, DALL-E 3, GPT Image 1, GPT Image 2, Adobe Firefly |
 | TC260 AIGC label (`iTXt` XMP) | PNG | 即梦 Dreamina, 可灵, other CN tools |
 | EXIF trace JSON (`eXIf`) | PNG | 即梦 Dreamina (ContentProducer ID, trace ID) |
 | SD generation params (`tEXt`) | PNG | Stable Diffusion A1111 |
@@ -125,7 +125,7 @@ This uses a diffusion model to re-generate the image with controlled noise, disr
 | 平台 | 标识类型 | 是否覆盖 |
 |------|---------|---------|
 | Google Gemini | C2PA + SynthID 隐形水印 | 元数据 ✅ / 隐形水印需 `--deep` |
-| DALL-E 3 / GPT Image 1 | C2PA | ✅ |
+| DALL-E 3 / GPT Image 1 / GPT Image 2 | C2PA | ✅ |
 | Adobe Firefly | C2PA + XMP | ✅ |
 | 即梦 Dreamina | TC260 国标 XMP + eXIf 追踪 ID | ✅ |
 | Stable Diffusion A1111 | PNG tEXt 提示词参数 | ✅ |
